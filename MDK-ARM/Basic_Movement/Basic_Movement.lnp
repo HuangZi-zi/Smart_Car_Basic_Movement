@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"basic_movement\startup_stm32f103xe.o"
+"basic_movement\main.o"
+"basic_movement\gpio.o"
+"basic_movement\tim.o"
+"basic_movement\stm32f1xx_it.o"
+"basic_movement\stm32f1xx_hal_msp.o"
+"basic_movement\motor.o"
+"basic_movement\stm32f1xx_hal_gpio_ex.o"
+"basic_movement\stm32f1xx_hal_tim.o"
+"basic_movement\stm32f1xx_hal_tim_ex.o"
+"basic_movement\stm32f1xx_hal.o"
+"basic_movement\stm32f1xx_hal_rcc.o"
+"basic_movement\stm32f1xx_hal_rcc_ex.o"
+"basic_movement\stm32f1xx_hal_gpio.o"
+"basic_movement\stm32f1xx_hal_dma.o"
+"basic_movement\stm32f1xx_hal_cortex.o"
+"basic_movement\stm32f1xx_hal_pwr.o"
+"basic_movement\stm32f1xx_hal_flash.o"
+"basic_movement\stm32f1xx_hal_flash_ex.o"
+"basic_movement\stm32f1xx_hal_exti.o"
+"basic_movement\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "Basic_Movement\Basic_Movement.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Basic_Movement.map" -o Basic_Movement\Basic_Movement.axf
