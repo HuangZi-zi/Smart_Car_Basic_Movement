@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+"pwm_c8t6\startup_stm32f103xb.o"
+"pwm_c8t6\motor.o"
+"pwm_c8t6\main.o"
+"pwm_c8t6\gpio.o"
+"pwm_c8t6\tim.o"
+"pwm_c8t6\stm32f1xx_it.o"
+"pwm_c8t6\stm32f1xx_hal_msp.o"
+"pwm_c8t6\stm32f1xx_hal_gpio_ex.o"
+"pwm_c8t6\stm32f1xx_hal_tim.o"
+"pwm_c8t6\stm32f1xx_hal_tim_ex.o"
+"pwm_c8t6\stm32f1xx_hal.o"
+"pwm_c8t6\stm32f1xx_hal_rcc.o"
+"pwm_c8t6\stm32f1xx_hal_rcc_ex.o"
+"pwm_c8t6\stm32f1xx_hal_gpio.o"
+"pwm_c8t6\stm32f1xx_hal_dma.o"
+"pwm_c8t6\stm32f1xx_hal_cortex.o"
+"pwm_c8t6\stm32f1xx_hal_pwr.o"
+"pwm_c8t6\stm32f1xx_hal_flash.o"
+"pwm_c8t6\stm32f1xx_hal_flash_ex.o"
+"pwm_c8t6\stm32f1xx_hal_exti.o"
+"pwm_c8t6\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "PWM_C8T6\PWM_C8T6.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PWM_C8T6.map" -o PWM_C8T6\PWM_C8T6.axf

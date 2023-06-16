@@ -66,6 +66,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -99,20 +100,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		back(20,1000);
-//		brake(500);
-//		forward(20,1000);
-//		brake(500);
-//		turn_left(50,1000);
-//		brake(100);
-//		turn_right(50,1000);
-//		brake(100);
-//		spin_left(50,1000);
-//		brake(100);
-//		spin_right(50,1000);
-//		brake(500);
-
-//		HAL_Delay(200);
+		//back(20,1000);
+		forward(70,1000);
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_13,GPIO_PIN_RESET);
   }
   /* USER CODE END 3 */
 }

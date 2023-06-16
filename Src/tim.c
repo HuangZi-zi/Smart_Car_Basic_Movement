@@ -21,38 +21,7 @@
 #include "tim.h"
 
 /* USER CODE BEGIN 0 */
-/*
-PWM输出的基本原理：
-自动重装载值：arr，决定频率
-阈值：CCRx，决定占空比
 
-计数方向可自选为向上或向下
-
-mode1:
-当CNT<CCRx，输出有效电平
-mode2:
-当CNT<CCRx，输出无效电平
-
-有效电平可自行配置为高或低
-
-配置
-Prescaler：分频系数
-Counter mode: 向上或向下计数
-Counter period：arr值
-CKD：时钟分频因子（一般不分）
-auto-reload-preload：自动重装填，一般使能
-mode：选mode1或mode2
-pulse：占空比，选0
-fast mode PWM：没啥用
-CH Polarity：设置有效电平
-
-L298N一般使用周期100us，频率10000HZ的PWM波
-
-计算：
-取psc=1
-omega=Tclk/[(arr+1)*(psc+1)]=72M/[12*(arr+1)]=10000
-arr=3599
-*/
 /* USER CODE END 0 */
 
 TIM_HandleTypeDef htim4;
