@@ -45,6 +45,13 @@ mode：选mode1或mode2
 pulse：占空比，选0
 fast mode PWM：没啥用
 CH Polarity：设置有效电平
+
+L298N一般使用周期100us，频率10000HZ的PWM波
+
+计算：
+取psc=1
+omega=Tclk/[(arr+1)*(psc+1)]=72M/[12*(arr+1)]=10000
+arr=3599
 */
 /* USER CODE END 0 */
 
@@ -57,9 +64,9 @@ void MX_TIM4_Init(void)
   TIM_OC_InitTypeDef sConfigOC = {0};
 
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 71;
+  htim4.Init.Prescaler = 1;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 12999;
+  htim4.Init.Period = 3599;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)

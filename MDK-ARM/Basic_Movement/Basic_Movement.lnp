@@ -1,11 +1,11 @@
 --cpu Cortex-M3
 "basic_movement\startup_stm32f103xe.o"
+"basic_movement\motor.o"
 "basic_movement\main.o"
 "basic_movement\gpio.o"
 "basic_movement\tim.o"
 "basic_movement\stm32f1xx_it.o"
 "basic_movement\stm32f1xx_hal_msp.o"
-"basic_movement\motor.o"
 "basic_movement\stm32f1xx_hal_gpio_ex.o"
 "basic_movement\stm32f1xx_hal_tim.o"
 "basic_movement\stm32f1xx_hal_tim_ex.o"

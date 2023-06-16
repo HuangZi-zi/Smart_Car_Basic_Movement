@@ -12,13 +12,18 @@ void SetMotorSpeed(unsigned char ucChannel,signed char cSpeed)
 	  if (cSpeed<=-100) 
 			cSpeed = -100;
 	
-   	sPWM = 7201 - fabs(cSpeed)*72;
+		//cSpeed是相对速度百分值，需要换算成相对PWM阈值
+		//比如pwm计数0-3599，相对速度50%，需要50%占空比，则阈值应设定为1799
+   	sPWM = 3599 - fabs(cSpeed)*36;
 	switch(ucChannel)
 	{
 		case 0://右轮
+			/*__HAL_TIM_SetCompare函数控制占空比。
+				最后一个参数传入阈值，计数器计数值与这个阈值进行比较
+				按照定时计数器的配置得到相应的PWM波*/
 			__HAL_TIM_SetCompare(&htim4,TIM_CHANNEL_3,sPWM);
 			if (cSpeed>0) 
-
+			//控制方向。
 				RIGHT_MOTOR_RESET;
 			else if(cSpeed<0) 
 				RIGHT_MOTOR_SET;		
