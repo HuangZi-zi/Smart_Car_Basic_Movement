@@ -99,17 +99,19 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		back(20,1000);
+//		back(70,1000);
+		brake(500);
+		forward(70,1000);
 //		brake(500);
-//		forward(20,1000);
-//		brake(500);
-//		turn_left(50,1000);
+//		turn_left(70,1000);
+		brake(500);
+//		turn_right(70,1000);
 //		brake(100);
-//		turn_right(50,1000);
-//		brake(100);
-//		spin_left(50,1000);
-//		brake(100);
-//		spin_right(50,1000);
+		
+		brake(500);
+//		spin_left(70,1000);
+		brake(500);
+		spin_right(70,1000);
 //		brake(500);
 
 //		HAL_Delay(200);
